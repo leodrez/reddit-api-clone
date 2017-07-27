@@ -2,9 +2,11 @@ import express from 'express';
 
 // Route imports
 import rootController from './controllers/rootController';
+import userController from './controllers/userController';
 
-const route = express();
+const routes = express();
 
-route.get('/', rootController.get);
+routes.get('/', rootController.get);
+routes.post('/signup', userController.post);
 
-export default route;
+export default routes;

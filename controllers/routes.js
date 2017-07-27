@@ -1,11 +1,10 @@
 import express from 'express';
 
+// Route imports
+import rootController from './rootController';
+
 const route = express();
 
-route.get('/', (req, res) => {
-  res.json({
-    message: 'working' 
-  });
-});
+route.get('/', rootController.get);
 
 export default route;

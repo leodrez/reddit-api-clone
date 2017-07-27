@@ -1,7 +1,7 @@
 import express from 'express';
 
 // Route imports
-import rootController from './rootController';
+import rootController from './controllers/rootController';
 
 const route = express();
 

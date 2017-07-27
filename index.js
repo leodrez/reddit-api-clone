@@ -1,6 +1,6 @@
 import express from 'express';
 
-import route from './controllers/routes';
+import route from './server/routes';
 
 const app = express();
 

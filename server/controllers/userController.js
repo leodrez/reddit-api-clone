@@ -3,9 +3,12 @@ import db from '../models/index';
 const userController = {};
 
 userController.post = (req, res) => {
-  const { username, password } = req.body;
+  const { 
+    username, 
+    password 
+  } = req.body;
 
-  //Validation
+  // Validation
 
   const user = new db.User({
     username,

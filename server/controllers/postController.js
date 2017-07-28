@@ -1,4 +1,4 @@
-import db from '../models';
+import db from '../models/index';
 
 const postController = {};
 
@@ -10,7 +10,9 @@ postController.post = (req, res) => {
     userId
   } = req.body;
 
-  const post = new.db.Post({
+  // Validation
+
+  const post = new db.Post({
     title,
     text,
     link,

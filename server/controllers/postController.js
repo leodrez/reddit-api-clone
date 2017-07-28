@@ -33,7 +33,8 @@ postController.post = (req, res) => {
 
 postController.getAll = (req, res) => {
   db.Post.find({}).populate({
-    path: '_creator'
+    path: '_creator',
+    select: 'username -_id'
   }).then((posts) => {
     return res.status(200).json({
       success: true,

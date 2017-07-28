@@ -14,8 +14,17 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: [8, 'Password must be eight characters or more']
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  isDeleted: {
+    type: Boolean, 
+    default: false
   }
 });
 
 const User = mongoose.model('User', userSchema);
 export default User;
+

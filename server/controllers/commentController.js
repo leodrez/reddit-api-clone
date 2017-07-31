@@ -1,4 +1,4 @@
-import db from '../models/Comment';
+import db from '../models/index';
 
 const commentController = {};
 
@@ -6,7 +6,7 @@ commentController.post = (req, res) => {
   const {
     text,
     userId,
-    postId,
+    postId
   } = req.body;
 
   // Validation
